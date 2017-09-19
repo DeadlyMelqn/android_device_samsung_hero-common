@@ -32,6 +32,9 @@
 
     IgnoreJniTime="true"
     AssertEnabled="false"
+
+    IgnoreFwConfig="false"
+    DisablePglorNmeaCallback="true"
    />
 
   <gll
@@ -46,6 +49,7 @@
 
   <gll_features
     EnableLowPowerPmm="true"
+    EnableBeidou="true"
     EnableGalileo="false"
   />
 
