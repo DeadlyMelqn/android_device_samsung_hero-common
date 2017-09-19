@@ -39,6 +39,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 #BOARD_KERNEL_CMDLINE := The bootloader ignores the cmdline from the boot.img
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
+BOARD_CUSTOM_BOOTIMG := true
 
 # Kernel
 TARGET_KERNEL_ARCH := arm64
