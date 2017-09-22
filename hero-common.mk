@@ -73,6 +73,10 @@ PRODUCT_PACKAGES += \
     libion \
     libfimg
 
+# hardware/samsung/AdvancedDisplay (MDNIE)
+PRODUCT_PACKAGES += \
+    AdvancedDisplay
+
 # Camera
 PRODUCT_PACKAGES += \
     camera.exynos5 \
