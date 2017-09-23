@@ -121,7 +121,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="2754000" />
             <Limit name="bitrate" range="1-120000000" />
-            <Limit name="concurrent-instances" max="16"/>
+            <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.avc.dec.secure" type="video/avc" >
@@ -148,7 +148,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="243000" />
             <Limit name="bitrate" range="1-80000000" />
-            <Limit name="concurrent-instances" max="16"/>
+            <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.HEVC.Decoder" type="video/hevc" >
@@ -161,7 +161,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="64x64" />
             <Limit name="blocks-per-second" min="1" max="2754000" />
             <Limit name="bitrate" range="1-120000000" />
-            <Limit name="concurrent-instances" max="16"/>
+            <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.VP9.Decoder" type="video/x-vnd.on2.vp9" >
@@ -174,7 +174,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="64x64" />
             <Limit name="blocks-per-second" min="1" max="243000" />
             <Limit name="bitrate" range="1-80000000" />
-            <Limit name="concurrent-instances" max="16"/>
+            <Limit name="concurrent-instances" max="16" />
             <Feature name="adaptive-playback" />
         </MediaCodec>
     </Decoders>
@@ -200,7 +200,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="854296" />
             <Limit name="bitrate" range="1-80000000" />
-            <Limit name="concurrent-instances" max="16"/>
+            <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.MPEG4.Encoder" type="video/mp4v-es" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -211,7 +211,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="480542" />
             <Limit name="bitrate" range="1-80000000" />
-            <Limit name="concurrent-instances" max="16"/>	    
+            <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.VP8.Encoder" type="video/x-vnd.on2.vp8" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -222,7 +222,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="16x16" />
             <Limit name="blocks-per-second" min="1" max="243000" />
             <Limit name="bitrate" range="1-80000000" />
-            <Limit name="concurrent-instances" max="16"/>
+            <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
         <MediaCodec name="OMX.Exynos.HEVC.Encoder" type="video/hevc" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -233,7 +233,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="32x32" />
             <Limit name="blocks-per-second" min="1" max="2211840" />
             <Limit name="bitrate" range="1-120000000" />
-            <Limit name="concurrent-instances" max="16" />	    
+            <Limit name="concurrent-instances" max="16" />
         </MediaCodec>
         <!--MediaCodec name="OMX.Exynos.VP9.Encoder" type="video/x-vnd.on2.vp9" >
             <Quirk name="requires-allocate-on-input-ports" />
@@ -244,7 +244,7 @@ Only the three quirks included above are recognized at this point:
             <Limit name="block-size" value="64x64" />
             <Limit name="blocks-per-second" min="1" max="243000" />
             <Limit name="bitrate" range="1-80000000" />
-            <Limit name="concurrent-instances" max="16"/>
+            <Limit name="concurrent-instances" max="16" />
         </MediaCodec-->
     </Encoders>
     <Include href="media_codecs_google_video.xml" />
