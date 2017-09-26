@@ -167,7 +167,7 @@ PRODUCT_COPY_FILES += \
 
 # Power
 PRODUCT_PACKAGES += \
-    power.universal8890
+    power.exynos5
 
 # Lights
 PRODUCT_PACKAGES += \
