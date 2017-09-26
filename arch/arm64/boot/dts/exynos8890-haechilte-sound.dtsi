@@ -1,0 +1,25 @@
+/*
+ * SAMSUNG Haehi Sound Card Device Tree Source
+ *
+ * Copyright (c) 2016 Samsung Electronics Co., Ltd.
+ *		http://www.samsung.com
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 as
+ * published by the Free Software Foundation.
+*/
+
+/ {
+	spi_0: spi@14d20000 {
+		audio_codec: cs47l91@0 {
+			/delete-property/ wlf,hs-mic;
+			wlf,micd-ranges = <
+				116 226
+				173 582
+				321 115
+				752 114
+				1257 252
+			>;
+		};
+	};
+};
