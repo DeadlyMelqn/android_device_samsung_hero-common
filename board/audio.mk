@@ -1,0 +1,3 @@
+# Workaround for Microphones
+RIL_SET_CALL_CLOCK_SYNC_WORKAROUND := true
+RIL_SET_TWO_MIC_CONTROL_WORKAROUND := true

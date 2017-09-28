@@ -50,6 +50,10 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.hwui.text_large_cache_height=2048 \
     ro.hwui.fbo_cache_size=16
 
+# sdcardfs
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.sys.sdcardfs=true
+
 # Network
 # Define default initial receive window size in segments.
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -77,3 +81,20 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wifi
 PRODUCT_PROPERTY_OVERRIDES += \
     wifi.interface=wlan0
+
+# Surface
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.scrollingcache=1 \
+    persist.sys.purgeable_assets=1 \
+    ro.compcache.default=18 \
+    ro.max.fling_velocity=12000 \
+    ro.min.fling_velocity=8000
+
+ADDITIONAL_DEFAULT_PROPERTIES += \
+    ro.secure=0 \
+    ro.adb.secure=0 \
+    ro.hardware=universal8890 \
+    persist.service.adb.enable=1 \
+    persist.service.debuggable=1 \
+    persist.sys.usb.config=adb \
+    ro.securestorage.support=false

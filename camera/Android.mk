@@ -6,6 +6,7 @@ LOCAL_SRC_FILES := \
     Camera2Wrapper.cpp \
     Camera3Wrapper.cpp
 
+LOCAL_STATIC_LIBRARIES := libbase
 LOCAL_SHARED_LIBRARIES := \
     libhardware liblog libcamera_client libutils libcutils
 
