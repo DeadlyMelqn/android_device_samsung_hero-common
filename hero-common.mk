@@ -130,7 +130,8 @@ PRODUCT_COPY_FILES += \
     $(DEVICE_PATH)/configs/audio/mixer_gains.xml:system/etc/mixer_gains.xml \
     $(DEVICE_PATH)/configs/audio/audio_effects.conf:system/etc/audio_effects.conf \
     $(DEVICE_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml \
-    $(DEVICE_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml
+    $(DEVICE_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
+    $(DEVICE_PATH)/configs/media/somxreg.conf:system/etc/somxreg.conf 
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
