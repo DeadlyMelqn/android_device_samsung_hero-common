@@ -207,7 +207,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/lib64/libopbaselib.so:system/lib64/libopbaselib.so \
     $(LOCAL_PATH)/prebuilt/lib64/libopcamera.so:system/lib64/libopcamera.so \
     $(LOCAL_PATH)/prebuilt/lib64/libopcameralib.so:system/lib64/libopcameralib.so \
-    $(LOCAL_PATH)/prebuilt/lib64/libtbdecode.so:system/lib64/libtbdecode.so \
     $(LOCAL_PATH)/prebuilt/lib/hw/camera.exynos5.so:system/lib/hw/camera.exynos5.so \
     $(LOCAL_PATH)/prebuilt/lib/hw/camera.vendor.exynos5.so:system/lib/hw/camera.vendor.exynos5.so \
     $(LOCAL_PATH)/prebuilt/lib/libcamera2ndk.so:system/lib/libcamera2ndk.so \
