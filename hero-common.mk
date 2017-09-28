@@ -183,6 +183,12 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     cm_charger_res_images
 
+# hardware/samsung/AdvancedDisplay (MDNIE)
+PRODUCT_PACKAGES += \
+    SamsungDoze \
+    Torch
+
+
 # Prebuilt
 PRODUCT_PACKAGES += \
     OnePlusCamera \
