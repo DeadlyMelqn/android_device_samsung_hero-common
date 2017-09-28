@@ -30,6 +30,9 @@ CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 # Enable real time lockscreen charging current values
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
+# Virtual Display
+BOARD_USES_VIRTUAL_DISPLAY := true 
+
 # Healthd
 RED_LED_PATH := "/sys/class/leds/led_r/brightness"
 GREEN_LED_PATH := "/sys/class/leds/led_g/brightness"
