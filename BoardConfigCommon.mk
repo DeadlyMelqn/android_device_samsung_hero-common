@@ -31,7 +31,7 @@ CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 BOARD_GLOBAL_CFLAGS += -DBATTERY_REAL_INFO
 
 # Virtual Display
-BOARD_USES_VIRTUAL_DISPLAY := true 
+BOARD_USES_VIRTUAL_DISPLAY := true
 
 # Healthd
 RED_LED_PATH := "/sys/class/leds/led_r/brightness"
@@ -71,6 +71,3 @@ BOARD_SEPOLICY_DIRS := $(LOCAL_PATH)/sepolicy
 
 # Inherit from the proprietary version
 -include vendor/samsung/hero-common/BoardConfigVendor.mk
-
-# WFD
-BOARD_USES_WFD := true
