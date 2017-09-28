@@ -78,6 +78,24 @@ PRODUCT_PACKAGES += \
     camera.exynos5 \
     Snap
 
+# Prebuilt
+PRODUCT_PACKAGES += \
+    OnePlusCamera \
+    OnePlusCameraService \
+    OnePlusGallery \
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \
+    $(LOCAL_PATH)/prebuilt/lib/libfilter-sdk.so:system/lib/libfilter-sdk.so \
+    $(LOCAL_PATH)/prebuilt/lib/libopbaselib.so:system/lib/libopbaselib.so \
+    $(LOCAL_PATH)/prebuilt/lib/libopcamera.so:system/lib/libopcamera.so \
+    $(LOCAL_PATH)/prebuilt/lib/libopcameralib.so:system/lib/libopcameralib.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libcameraservice.so:system/lib64/libcameraservice.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libfilter-sdk.so:system/lib64/libfilter-sdk.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libopbaselib.so:system/lib64/libopbaselib.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libopcamera.so:system/lib64/libopcamera.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libopcameralib.so:system/lib64/libopcameralib.so 
+
 # Radio
 PRODUCT_PACKAGES += \
     libxml2 \
@@ -126,8 +144,11 @@ PRODUCT_PACKAGES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
-    $(LOCAL_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml \
+    $(DEVICE_PATH)/configs/audio/audio_policy.conf:system/etc/audio_policy.conf \
+    $(DEVICE_PATH)/configs/audio/mixer_gains.xml:system/etc/mixer_gains.xml
+    $(DEVICE_PATH)/configs/audio/audio_effects.conf:system/etc/audio_effects.conf \
+    $(DEVICE_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml
+    $(DEVICE_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml
 
 PRODUCT_PACKAGES += \
     audio.a2dp.default \
