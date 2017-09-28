@@ -78,24 +78,6 @@ PRODUCT_PACKAGES += \
     camera.exynos5 \
     Snap
 
-# Prebuilt
-PRODUCT_PACKAGES += \
-    OnePlusCamera \
-    OnePlusCameraService \
-    OnePlusGallery \
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \
-    $(LOCAL_PATH)/prebuilt/lib/libfilter-sdk.so:system/lib/libfilter-sdk.so \
-    $(LOCAL_PATH)/prebuilt/lib/libopbaselib.so:system/lib/libopbaselib.so \
-    $(LOCAL_PATH)/prebuilt/lib/libopcamera.so:system/lib/libopcamera.so \
-    $(LOCAL_PATH)/prebuilt/lib/libopcameralib.so:system/lib/libopcameralib.so \
-    $(LOCAL_PATH)/prebuilt/lib64/libcameraservice.so:system/lib64/libcameraservice.so \
-    $(LOCAL_PATH)/prebuilt/lib64/libfilter-sdk.so:system/lib64/libfilter-sdk.so \
-    $(LOCAL_PATH)/prebuilt/lib64/libopbaselib.so:system/lib64/libopbaselib.so \
-    $(LOCAL_PATH)/prebuilt/lib64/libopcamera.so:system/lib64/libopcamera.so \
-    $(LOCAL_PATH)/prebuilt/lib64/libopcameralib.so:system/lib64/libopcameralib.so 
-
 # Radio
 PRODUCT_PACKAGES += \
     libxml2 \
@@ -200,6 +182,42 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     charger_res_images \
     cm_charger_res_images
+
+# Prebuilt
+PRODUCT_PACKAGES += \
+    OnePlusCamera \
+    Snap \
+    OnePlusCameraService \
+    OnePlusGallery
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \
+    $(LOCAL_PATH)/prebuilt/lib/libfilter-sdk.so:system/lib/libfilter-sdk.so \
+    $(LOCAL_PATH)/prebuilt/lib/libopbaselib.so:system/lib/libopbaselib.so \
+    $(LOCAL_PATH)/prebuilt/lib/libopcamera.so:system/lib/libopcamera.so \
+    $(LOCAL_PATH)/prebuilt/lib/libopcameralib.so:system/lib/libopcameralib.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libcameraservice.so:system/lib64/libcameraservice.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libfilter-sdk.so:system/lib64/libfilter-sdk.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libopbaselib.so:system/lib64/libopbaselib.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libopcamera.so:system/lib64/libopcamera.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libopcameralib.so:system/lib64/libopcameralib.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libtbdecode.so:system/lib64/libtbdecode.so \
+    $(LOCAL_PATH)/prebuilt/lib/hw/camera.exynos5.so:system/lib/hw/camera.exynos5.so \
+    $(LOCAL_PATH)/prebuilt/lib/hw/camera.vendor.exynos5.so:system/lib/hw/camera.vendor.exynos5.so \
+    $(LOCAL_PATH)/prebuilt/lib/libcamera2ndk.so:system/lib/libcamera2ndk.so \
+    $(LOCAL_PATH)/prebuilt/lib/libcamera_client.so:system/lib/libcamera_client.so \
+    $(LOCAL_PATH)/prebuilt/lib/libcamera_metadata.so:system/lib/libcamera_metadata.so \
+    $(LOCAL_PATH)/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \
+    $(LOCAL_PATH)/prebuilt/lib/libexynoscamera.so:system/lib/libexynoscamera.so \
+    $(LOCAL_PATH)/prebuilt/lib/libexynoscamera3.so:system/lib/libexynoscamera3.so \
+    $(LOCAL_PATH)/prebuilt/lib64/hw/camera.exynos5.so:system/lib64/hw/camera.exynos5.so \
+    $(LOCAL_PATH)/prebuilt/lib64/hw/camera.vendor.exynos5.so:system/lib64/hw/camera.vendor.exynos5.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libcamera2ndk.so:system/lib64/libcamera2ndk.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libcamera_client.so:system/lib64/libcamera_client.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libcamera_metadata.so:system/lib64/libcamera_metadata.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libcameraservice.so:system/lib64/libcameraservice.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libexynoscamera.so:system/lib64/libexynoscamera.so \
+    $(LOCAL_PATH)/prebuilt/lib64/libexynoscamera3.so:system/lib64/libexynoscamera3.so
 
 # System properties
 include $(LOCAL_PATH)/system_prop.mk
