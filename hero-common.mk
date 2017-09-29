@@ -76,7 +76,6 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.exynos5 \
-    Snap
 
 # Radio
 PRODUCT_PACKAGES += \
