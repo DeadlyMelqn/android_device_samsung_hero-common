@@ -191,7 +191,6 @@ PRODUCT_PACKAGES += \
 # Prebuilt
 PRODUCT_PACKAGES += \
     OnePlusCamera \
-    Snap \
     OnePlusCameraService \
     OnePlusGallery
 
