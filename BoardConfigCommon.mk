@@ -15,6 +15,13 @@ TARGET_SEC_FP_HAL_VARIANT := bauth
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
+# Image
+BOARD_CUSTOM_BOOTIMG_MK := hardware/samsung/mkbootimg.mk
+BOARD_KERNEL_SEPARATED_DT := true
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100
+TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
+BOARD_CUSTOM_BOOTIMG := true
+
 # Samsung Camera
 BOARD_USE_SAMSUNG_CAMERAFORMAT_NV21 := true
 
@@ -45,12 +52,6 @@ BOARD_MODEM_TYPE := ss333
 
 # RIL.java overwrite
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
-
-# Boot animation
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
-TARGET_SCREEN_HEIGHT := 1920
-TARGET_SCREEN_WIDTH := 1080
 
 # Properties
 TARGET_SYSTEM_PROP := device/samsung/hero-common/system.prop
