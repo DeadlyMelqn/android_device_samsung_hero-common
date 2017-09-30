@@ -15,9 +15,6 @@ CHARGING_ENABLED_PATH := /sys/class/power_supply/battery/batt_lp_charging
 # Fonts
 EXTENDED_FONT_FOOTPRINT := true
 
-# Packaging
-BLOCK_BASED_OTA := true
-
 # Power Hal
 TARGET_POWERHAL_VARIANT := samsung
 
@@ -38,6 +35,7 @@ BACKLIGHT_PATH := "/sys/class/backlight/panel/brightness"
 BOARD_NFC_HAL_SUFFIX := universal8890
 
 # RIL
+BOARD_VENDOR := samsung
 BOARD_MODEM_TYPE := ss333
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 
