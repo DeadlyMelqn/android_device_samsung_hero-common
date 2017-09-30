@@ -1,2 +1,2 @@
 # modemloader
-sys.mobicoredaemon.enable         u:object_r:tee_prop:s0
+hw.revision         u:object_r:modemloader_prop:s0
