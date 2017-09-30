@@ -51,7 +51,6 @@ PRODUCT_PACKAGES += \
 # Packages
 PRODUCT_PACKAGES += \
 	libsamsung_symbols \
-	SamsungServiceMode \
 	Torch \
 	SamsungDoze
 
@@ -230,9 +229,16 @@ PRODUCT_PACKAGES += \
 	init.rilcommon.rc
 
 PRODUCT_PACKAGES += \
-	libxml2 \
-	libprotobuf-cpp-full \
-	libsecril-client
+    libxml2 \
+    libprotobuf-cpp-full
+
+PRODUCT_PACKAGES += \
+    libsecril-client \
+    libsecril-client-sap \
+    modemloader
+
+PRODUCT_PACKAGES += \
+    SamsungServiceMode
 
 # USB
 PRODUCT_PACKAGES += \
