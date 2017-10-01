@@ -3,3 +3,26 @@ import /efs/factory.prop
 
 # boot device
 ro.boot.bootdevice=155a0000.ufs
+
+# Google assistant
+ro.opa.eligible_device=true
+
+# Tweaks
+# Better Responsiveness & Speed
+ro.max.fling_velocity=12000
+ro.min.fling_velocity=8000
+# Disable Miscellaneous Android Logging Stuff
+debugtool.anrhistory=0
+profiler.debugmonitor=false
+profiler.launch=false
+profiler.hung.dumpdobugreport=false
+# Better signal reception
+persist.cust.tel.eons=1
+# Saves some battery without reducing performances
+wifi.supplicant_scan_interval=240
+power.saving.mode=1
+ro.ril.disable.power.collapse=0
+ro.ril.power_collapse=1
+power_supply.wakeup=enable
+# Increase jpg quality to 100%
+ro.media.enc.jpeg.quality=100

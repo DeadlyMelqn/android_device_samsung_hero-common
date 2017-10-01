@@ -82,7 +82,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     OnePlusCamera \
     OnePlusCameraService \
-    OnePlusGallery \
+    OnePlusGallery
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \

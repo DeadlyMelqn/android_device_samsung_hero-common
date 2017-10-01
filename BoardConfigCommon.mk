@@ -146,12 +146,6 @@ BOARD_MODEM_TYPE := ss333
 # RIL.java overwrite
 BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril
 
-# Boot animation
-TARGET_BOOTANIMATION_PRELOAD := true
-TARGET_BOOTANIMATION_TEXTURE_CACHE := true
-TARGET_SCREEN_HEIGHT := 2048
-TARGET_SCREEN_WIDTH := 1536
-
 # Properties
 TARGET_SYSTEM_PROP := device/samsung/hero-common/system.prop
 
