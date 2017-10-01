@@ -78,6 +78,12 @@ PRODUCT_PACKAGES += \
     camera.exynos5 \
     Snap
 
+# hardware/samsung/AdvancedDisplay (MDNIE)
+PRODUCT_PACKAGES += \
+    SamsungDoze \
+    AdvancedDisplay \
+    Torch
+
 # Radio
 PRODUCT_PACKAGES += \
     libxml2 \
