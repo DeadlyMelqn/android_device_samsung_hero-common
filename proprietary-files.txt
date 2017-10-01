@@ -80,10 +80,10 @@ lib64/libfloatingfeature.so
 # Graphics
 vendor/lib/egl/libGLES_mali.so
 vendor/lib64/egl/libGLES_mali.so
-#vendor/lib/hw/vulkan.exynos5.so
-#vendor/lib64/hw/vulkan.exynos5.so
-#vendor/lib/libOpenCL.so.1.1
-#vendor/lib64/libOpenCL.so.1.1
+vendor/lib/hw/vulkan.exynos5.so
+vendor/lib64/hw/vulkan.exynos5.so
+vendor/lib/libOpenCL.so.1.1
+vendor/lib64/libOpenCL.so.1.1
 
 # Media
 vendor/firmware/companion_2l1_master_setfile.bin
