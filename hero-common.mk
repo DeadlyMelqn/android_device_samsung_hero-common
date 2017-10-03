@@ -172,6 +172,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     power.exynos5
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 2560
+TARGET_SCREEN_WIDTH := 1440
+
 # Lights
 PRODUCT_PACKAGES += \
     lights.universal8890
