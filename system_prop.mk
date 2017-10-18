@@ -21,7 +21,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.hwui.text_small_cache_width=4096 \
 	ro.hwui.text_small_cache_height=4096 \
 	ro.hwui.text_large_cache_width=8192 \
-        ro.hwui.text_large_cache_height=8192
+	ro.hwui.text_large_cache_height=8192
 
 # Network
 # Define default initial receive window size in segments.
