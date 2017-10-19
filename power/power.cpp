@@ -323,6 +323,8 @@ static int power_get_feature(struct power_module *module __unused, feature_t fea
 	}
 }
 
+static void power_set_feature(struct power_module *module, feature_t feature, int state) {
+	switch (feature) {
 		default:
 			ALOGW("Error setting the feature %d and state %d, it doesn't exist\n",
 				  feature, state);
