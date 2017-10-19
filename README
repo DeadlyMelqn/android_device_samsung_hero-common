@@ -1,5 +1,25 @@
-Device configuration for Exynos 8890 / Hero(2)lte
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
 
-WORK IN PROGRESS
+  <!-- Device Trees -->
+  <project path="device/samsung/hero-common" name="DeadlyMelqn/android_device_samsung_hero-common" remote="github" revision="sascha" />
+  <project path="device/samsung/herolte" name="8890dev/android_device_samsung_herolte" remote="github" revision="cm-14.1" />
+  <project path="device/samsung/hero2lte" name="8890dev/android_device_samsung_hero2lte" remote="github" revision="cm-14.1" />
 
-# Copyright (C) SaschaNes - Sascha Nesterovic
+  <!-- Kernel -->
+  <project path="kernel/samsung/universal8890" name="DeadlyMelqn/android_kernel_samsung_universal8890" remote="github" revision="kylo2" />
+
+  <!-- Vendor -->
+  <project path="vendor/samsung/hero-common" name="SaschaNes/android_vendor_samsung_hero-common" remote="github" revision="lin-14.1" />
+
+  <!-- Hardware -->
+  <project path="hardware/samsung" name="LineageOS/android_hardware_samsung" remote="github" revision="cm-14.1" />
+  <project path="hardware/samsung_slsi-cm/exynos" name="LineageOS/android_hardware_samsung_slsi-cm_exynos" remote="github" revision="cm-14.1" />
+  <project path="hardware/samsung_slsi-cm/exynos5" name="LineageOS/android_hardware_samsung_slsi-cm_exynos5" remote="github" revision="cm-14.1" />
+  <project path="hardware/samsung_slsi-cm/openmax" name="LineageOS/android_hardware_samsung_slsi-cm_openmax" remote="github" revision="cm-14.1" />
+  <project path="hardware/samsung_slsi-cm/exynos8890" name="LineageOS/android_hardware_samsung_slsi-cm_exynos8890" remote="github" revision="cm-14.1" />
+
+  <!-- Toolchain -->
+  <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-cortex_a53-linux-gnueabi" name="djb77/aarch64-cortex_a53-linux-gnueabi" remote="github" revision="gcc"/>
+
+</manifest>
