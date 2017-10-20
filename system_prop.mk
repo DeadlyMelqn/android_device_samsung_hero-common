@@ -46,13 +46,18 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.bt.bdaddr_path="/efs/bluetooth/bt_addr"
 
-# Properties
+# Graphics
 PRODUCT_PROPERTY_OVERRIDES += \
-	ro.bq.gpu_to_cpu_unsupported=1 \
+	debug.composition.type=dyn \
 	ro.opengles.version=196610 \
+	video.accelerate.hw=1 \
+	debug.egl.profiler=1 \
 	ro.sf.lcd_density=640 \
-	debug.hwc.force_gpu=1
-
+	debug.sf.hw=1 \
+	debug.egl.hw=1 \
+	debug.hwc.force_gpu=0 \
+	debug.hwc.max_hw_overlays=1 \
+	persist.sys.ui.hw=true
 
 # NFC
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -77,13 +82,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0
 
-# ResurrectionRemix
+# Performance
 PRODUCT_PROPERTY_OVERRIDES += \
-	debug.hwc.force_gpu=0 \
-	debug.hwc.max_hw_overlays=1 \
-	debug.sf.hw=1 \
-	persist.sys.ui.hw=true \
-	debug.egl.hw=1
+	debug.performance.tuning=1
+
+# Power-Management
+PRODUCT_PROPERTY_OVERRIDES += \
+	pm.sleep_mode=1
 
 # Surface
 PRODUCT_PROPERTY_OVERRIDES += \
