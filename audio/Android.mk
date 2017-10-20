@@ -1,4 +1,4 @@
-# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -11,6 +11,8 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
+
+ifneq ($(TARGET_AUDIOHAL_VARIANT),samsung)
 
 LOCAL_PATH := $(call my-dir)
 
@@ -28,9 +30,15 @@ LOCAL_C_INCLUDES += \
 	$(call include-path-for, audio-effects) \
 	$(call include-path-for, audio-utils) \
 	$(call include-path-for, audio-route) \
-	hardware/samsung/ril/libsecril-client
+	hardware/samsung/ril/libsecril-client \
+        $(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr/include \
+
+LOCAL_ADDITIONAL_DEPENDENCIES += \
+	$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr
 
 LOCAL_SHARED_LIBRARIES := liblog libcutils libtinyalsa libaudioutils libdl \
 	libaudioroute libsecril-client
 
 include $(BUILD_SHARED_LIBRARY)
+
+endif
