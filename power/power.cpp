@@ -76,9 +76,6 @@ static void power_init(struct power_module __unused * module) {
 	if (!is_file(POWER_CONFIG_ALWAYS_ON_FP))
 		pfwrite(POWER_CONFIG_ALWAYS_ON_FP, false);
 
-	if (!is_file(POWER_CONFIG_DT2W))
-		pfwrite(POWER_CONFIG_DT2W, false);
-
 	if (!is_file(POWER_CONFIG_BOOST))
 		pfwrite(POWER_CONFIG_BOOST, true);
 
@@ -137,7 +134,7 @@ static void power_hint(struct power_module *module, power_hint_t hint, void *dat
 			power_set_profile(value ? PROFILE_DREAMING_OR_DOZING : requested_power_profile);
 			break;
 #endif
-			
+
 		/***********************************
 		 * Boosting
 		 */
@@ -217,7 +214,7 @@ static void power_set_profile(int profile) {
 	pfwrite_legacy("/sys/class/input_booster/level", (data.input.booster ? 2 : 0));
 	pfwrite_legacy("/sys/class/input_booster/head", data.input.booster_table);
 	pfwrite_legacy("/sys/class/input_booster/tail", data.input.booster_table);
-	
+
 	/*********************
 	 * Generic Settings
 	 */
@@ -252,16 +249,12 @@ static void power_boostpulse(int duration) {
  * Inputs
  */
 static void power_input_device_state(int state) {
-	int dt2w = 0, dt2w_sysfs = 0, always_on_fp = 0;
+	int always_on_fp = 0;
 
-	pfread(POWER_CONFIG_DT2W, &dt2w);
-	pfread(POWER_DT2W_ENABLED, &dt2w_sysfs);
 	pfread(POWER_CONFIG_ALWAYS_ON_FP, &always_on_fp);
 
 #if LOG_NDEBUG
 	ALOGD("%s: state         = %d", __func__, state);
-	ALOGD("%s: dt2w          = %d", __func__, dt2w);
-	ALOGD("%s: dt2w_sysfs    = %d", __func__, dt2w_sysfs);
 	ALOGD("%s: always_on_fp  = %d", __func__, always_on_fp);
 #endif
 
@@ -296,11 +289,6 @@ static void power_input_device_state(int state) {
 			break;
 	}
 
-	if (dt2w) {
-		pfwrite_legacy(POWER_DT2W_ENABLED, true);
-	} else {
-		pfwrite_legacy(POWER_DT2W_ENABLED, false);
-	}
 
 	// give hw some milliseconds to properly boot up
 	usleep(100 * 1000); // 100ms
@@ -330,26 +318,10 @@ static int power_get_feature(struct power_module *module __unused, feature_t fea
 		case POWER_FEATURE_SUPPORTED_PROFILES:
 			ALOGD("%s: request for POWER_FEATURE_SUPPORTED_PROFILES = %d", __func__, PROFILE_MAX_USABLE);
 			return PROFILE_MAX_USABLE;
-		case POWER_FEATURE_DOUBLE_TAP_TO_WAKE:
-			ALOGD("%s: request for POWER_FEATURE_DOUBLE_TAP_TO_WAKE = 1", __func__);
-			return 1;
 		default:
 			return -EINVAL;
 	}
 }
-
-static void power_set_feature(struct power_module *module, feature_t feature, int state) {
-	switch (feature) {
-		case POWER_FEATURE_DOUBLE_TAP_TO_WAKE:
-			ALOGD("%s: set POWER_FEATURE_DOUBLE_TAP_TO_WAKE to \"%d\"", __func__, state);
-			if (state) {
-				pfwrite(POWER_CONFIG_DT2W, true);
-				pfwrite_legacy(POWER_DT2W_ENABLED, true);
-			} else {
-				pfwrite(POWER_CONFIG_DT2W, false);
-				pfwrite_legacy(POWER_DT2W_ENABLED, false);
-			}
-			break;
 
 		default:
 			ALOGW("Error setting the feature %d and state %d, it doesn't exist\n",
