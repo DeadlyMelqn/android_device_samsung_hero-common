@@ -65,6 +65,7 @@ PRODUCT_COPY_FILES += \
 	$(DEVICE_PATH)/configs/audio/mixer_gains.xml:system/etc/mixer_gains.xml \
 	$(DEVICE_PATH)/configs/audio/audio_effects.conf:system/etc/audio_effects.conf \
 	$(DEVICE_PATH)/configs/audio/mixer_paths_0.xml:system/etc/mixer_paths_0.xml \
+	$(DEVICE_PATH)/configs/audio/mixer_paths.xml:system/etc/mixer_paths.xml \
 
 PRODUCT_PACKAGES += \
 	audio.a2dp.default \
@@ -72,10 +73,6 @@ PRODUCT_PACKAGES += \
 	audio.r_submix.default \
 	audio.primary.universal8890 \
 	libtinycompress
-
-# Workaround for non-working incall/callspeaker-mic
-RIL_SET_CALL_CLOCK_SYNC_WORKAROUND := true
-RIL_SET_TWO_MIC_CONTROL_WORKAROUND := true
 
 # Properties
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -257,6 +254,12 @@ PRODUCT_PACKAGES += \
 	wpa_supplicant \
 	wpa_supplicant.conf
 
+
+# Prebuilt
+PRODUCT_PACKAGES += \
+    OnePlusCamera \
+    OnePlusCameraService \
+    OnePlusGallery \ 
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilt/lib/libcameraservice.so:system/lib/libcameraservice.so \
