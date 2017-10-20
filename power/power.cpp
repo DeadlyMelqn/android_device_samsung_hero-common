@@ -77,7 +77,7 @@ static void power_init(struct power_module __unused * module) {
 		pfwrite(POWER_CONFIG_ALWAYS_ON_FP, false);
 
 	if (!is_file(POWER_CONFIG_BOOST))
-		pfwrite(POWER_CONFIG_BOOST, true);
+		pfwrite(POWER_CONFIG_BOOST);
 
 	if (!is_file(POWER_CONFIG_PROFILES))
 		pfwrite(POWER_CONFIG_PROFILES, true);
