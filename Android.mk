@@ -17,6 +17,6 @@
 LOCAL_PATH := $(call my-dir)
 SAM_ROOT := hardware/samsung
 
-ifneq ($(filter zerofltexx zeroltexx zerofltecan zeroltecan zerofltespr zeroltespr zeroflteskt zerolteskt,$(TARGET_DEVICE)),)
+ifneq ($(filter herolte hero2lte,$(TARGET_DEVICE)),)
   include $(call all-subdir-makefiles,$(LOCAL_PATH))
 endif

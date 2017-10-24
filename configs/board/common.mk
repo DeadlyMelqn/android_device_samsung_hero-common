@@ -14,11 +14,10 @@
 # limitations under the License.
 #
 
-# Audio HAL variant
+# Samsung HALs
 TARGET_AUDIOHAL_VARIANT := samsung
-
-# Build
-PRODUCT_SKIP_FINGERPRINT_FROM_FILE := true
+TARGET_POWERHAL_VARIANT := samsung
+TARGET_SEC_FP_HAL_VARIANT := bauth
 
 # Include an expanded selection of fonts
 EXTENDED_FONT_FOOTPRINT := true

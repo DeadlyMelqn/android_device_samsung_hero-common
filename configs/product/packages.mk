@@ -18,7 +18,7 @@
 PRODUCT_PACKAGES += \
     Jelly
 
-# DTB
+# Flat device tree for boot image 
 PRODUCT_PACKAGES += \
     dtbhtoolExynos
 

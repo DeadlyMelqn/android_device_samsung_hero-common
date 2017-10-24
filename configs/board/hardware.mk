@@ -16,7 +16,7 @@
 
 # Hardware
 BOARD_HARDWARE_CLASS += hardware/samsung/lineagehw
-BOARD_HARDWARE_CLASS += device/samsung/zero-common/lineagehw
+BOARD_HARDWARE_CLASS += device/samsung/hero-common/lineagehw
 
 # HWCServices
 BOARD_USES_HWC_SERVICES := true

@@ -16,13 +16,15 @@
 
 # Ramdisk
 PRODUCT_PACKAGES += \
-    fstab.samsungexynos7420 \
+    fstab.samsungexynos8890 \
     init.baseband.rc \
-    init.battery.rc \
+    init.bluetooth.rc \
     init.gps.rc \
     init.power.rc \
     init.rilchip.rc \
-    init.samsungexynos7420.rc \
-    init.samsungexynos7420.usb.rc \
+    init.rilcommon.rc \
+    init.samsung.rc \
+    init.samsungexynos8890.rc \
+    init.samsungexynos8890.usb.rc \
     init.wifi.rc \
-    ueventd.samsungexynos7420.rc
+    ueventd.samsungexynos8890.rc

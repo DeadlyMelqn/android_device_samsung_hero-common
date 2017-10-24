@@ -14,13 +14,9 @@
 # limitations under the License.
 #
 
-# Radio
-BOARD_PROVIDES_LIBRIL := true
+# RIL
+BOARD_VENDOR := samsung
+BOARD_MODEM_TYPE := ss333
 
-# Dual-SIM Support
-ifeq ($(BOARD_HAS_DUAL_SIM),true)
-
-  # libril
-  SIM_COUNT := 2
-
-endif
+# RIL.java overwrite
+BOARD_RIL_CLASS := ../../../$(LOCAL_PATH)/ril

@@ -67,14 +67,13 @@ persist.sys.ui.hw=true
 #
 # SoC
 #
-ro.chipname=exynos7420
-ro.nfc.sec_hal=true
+ro.chipname=exynos8890
 ro.sf.lcd_density=640
 
 #
 # Storage
 #
-ro.sys.sdcardfs=1
+ro.sys.sdcardfs=true
 
 #
 # WiFi

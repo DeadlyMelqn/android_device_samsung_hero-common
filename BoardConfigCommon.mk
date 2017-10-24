@@ -20,15 +20,15 @@ LOCAL_PATH := device/samsung/zero-common
 BOARD_VENDOR :=
 
 # Core board-properties
-TARGET_BOOTLOADER_BOARD_NAME := universal7420
+TARGET_BOOTLOADER_BOARD_NAME := universal8890
 TARGET_BOARD_PLATFORM := exynos5
-TARGET_SOC := exynos7420
+TARGET_SOC := exynos8890
 
 # inherit the splitted configs
 -include $(LOCAL_PATH)/configs/board/*.mk
 
 # inherit from the proprietary version
--include vendor/samsung/zero-common/BoardConfigVendor.mk
+-include vendor/samsung/hero-common/BoardConfigVendor.mk
 
 # inherit from the NexusOS vendor-repo
 -include vendor/nexus/board.mk

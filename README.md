@@ -1,3 +1,5 @@
+# Attmept to make tree into hero-common for Samsung Galaxy S7
+
 # Common Device Tree for the Samsung Galaxy S6
 
 -> Work In Progress. <-
@@ -30,7 +32,7 @@
 
 ### Further Credits
  * [@minealex2244](https://github.com/minealex2244),
- * [@Noxxxious](https://github.com/Noxxxious) and 
+ * [@Noxxxious](https://github.com/Noxxxious) and
  * [@Wyzp](https://github.com/Wyzp) for their help on the kernel
 
 
@@ -49,12 +51,12 @@ Short (no legal advice) summary of the used license:
  * Private Use
  * Use Patent Claims
  * Place Warranty
- 
+
 
 **Cannot**
 
  * Hold Liable
- * Use Trademark 
+ * Use Trademark
 
 
 **Must**
